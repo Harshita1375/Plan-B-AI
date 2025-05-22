@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import './Register.css';
 
 function Register() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -19,9 +21,28 @@ function Register() {
 
   const handleRegister = async (e) => {
     e.preventDefault();
+
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/auth/users/', formData);
-      alert('User registered successfully!');
+      // 1. Register the user
+      await axios.post('http://127.0.0.1:8000/api/auth/users/', formData);
+
+      // 2. Login the user and get token
+      const loginData = {
+        email: formData.email,
+        password: formData.password
+      };
+
+      const loginResponse = await axios.post('http://127.0.0.1:8000/api/auth/token/login/', loginData);
+
+      const token = loginResponse.data.auth_token;
+
+      // 3. Store token in localStorage
+      localStorage.setItem('authToken', token);
+
+      alert('Registration successful!');
+      
+      // 4. Redirect to details page
+      navigate('/details');
     } catch (error) {
       alert('Registration failed!');
       console.error(error.response?.data || error);
