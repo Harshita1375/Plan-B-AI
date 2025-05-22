@@ -35,6 +35,9 @@ function Dashboard() {
     setTasks(updatedTasks);
   };
 
+  const handleProfile=(index) =>{
+    navigate('/profile');
+  }
   const removeTask = (index) => {
     const updatedTasks = tasks.filter((_, i) => i !== index);
     setTasks(updatedTasks);
@@ -50,7 +53,7 @@ function Dashboard() {
       <nav className="navbar">
         <h2 className="navbar-logo">Dashboard</h2>
         <div className="navbar-links">
-          <button>Profile</button>
+          <button onClick={handleProfile}>Profile</button>
           <button onClick={handleLogout}>Logout</button>
         </div>
       </nav>

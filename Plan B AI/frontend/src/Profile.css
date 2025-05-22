@@ -1,0 +1,142 @@
+/* Import Poppins font in your index.html or root:
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: #f0f4ff;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.profile-page {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #e0e7ff, #fefefe);
+  padding: 80px 30px 60px 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Buttons fixed top-left */
+.button-group {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.button-group button {
+  background-color: #2a4365;
+  border: none;
+  padding: 0.65rem 1.5rem;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  user-select: none;
+  box-shadow: 0 4px 8px rgba(42, 67, 101, 0.35);
+  transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+  background-color: #1a2e4a;
+}
+
+/* Profile container centered */
+.profile-container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 45px 50px;
+  box-shadow: 0 10px 30px rgba(170, 180, 200, 0.15);
+  max-width: 700px;
+  width: 100%;
+  color: #2d3748;
+  margin-top: 20px;
+  overflow-y: auto;
+  max-height: calc(100vh - 120px); /* keep inside viewport */
+}
+
+/* Main heading */
+.profile-container h2 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-bottom: 35px;
+  letter-spacing: 1.5px;
+  color: #2a4365;
+  text-align: center;
+}
+
+/* Profile card content */
+.profile-card p {
+  font-size: 1.15rem;
+  margin: 12px 0;
+  line-height: 1.65;
+  color: #4a5568;
+}
+
+.profile-card p strong {
+  color: #2a4365;
+  font-weight: 700;
+}
+
+.profile-card h3 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #2a4365;
+  border-bottom: 3px solid #2a4365;
+  padding-bottom: 6px;
+  letter-spacing: 0.8px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .profile-page {
+    padding: 90px 20px 40px 20px;
+  }
+
+  .button-group {
+    top: 15px;
+    left: 15px;
+    gap: 12px;
+  }
+
+  .button-group button {
+    font-size: 0.95rem;
+    padding: 0.5rem 1.2rem;
+  }
+
+  .profile-container {
+    padding: 30px 25px;
+    max-height: calc(100vh - 100px);
+  }
+
+  .profile-container h2 {
+    font-size: 2rem;
+  }
+
+  .profile-card h3 {
+    font-size: 1.4rem;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+
+  .profile-card p {
+    font-size: 1rem;
+  }
+}

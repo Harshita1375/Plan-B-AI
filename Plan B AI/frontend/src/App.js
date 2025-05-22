@@ -3,6 +3,7 @@ import Register from './Register';
 import Login from './Login';
 import Details from './Details';
 import Dashboard from './Dashboard';
+import Profile from './Profile';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/details" element={<Details />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   );
