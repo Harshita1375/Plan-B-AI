@@ -1,0 +1,143 @@
+/* Layout Wrappers */
+.dashboard-wrapper {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f3f4f6;
+  height: 100vh;
+  width: 100vw;
+}
+
+.navbar {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 24px;
+}
+
+.navbar-links button {
+  background: white;
+  color: #2575fc;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Main content split */
+.main-content {
+  display: flex;
+  padding: 2px;
+  gap: 40px;
+}
+
+.left-panel {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  height: 100vh;
+  width: 30vw;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* To-Do Styles */
+.todo-input {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.todo-input input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.todo-input button {
+  padding: 8px 12px;
+  margin-left: 10px;
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-list li {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f9f9f9;
+  margin-bottom: 8px;
+  border-radius: 6px;
+}
+
+.dashboard-date {
+  margin-bottom: 30px;
+  color: #0e0808;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+}
+
+.random-quote {
+  padding: 1.6rem 1.5rem;
+  font-style: italic;
+  font-size: 2rem;
+  color: #4a4a4a;
+  background: #f0f4f8;  /* subtle light blue-gray */
+  border-left: 5px solid #3f51b5;  /* elegant blue accent */
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  line-height: 2;
+  font-family: 'Georgia', serif;
+  user-select: none;  /* prevent accidental text selection */
+  transition: background-color 0.3s ease;
+}
+
+.random-quote:hover {
+  background: #e3eafc;
+  border-left-color: #1a237e;
+  color: #2c387e;
+  cursor: default;
+}
+.todo-list li.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.todo-list input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.todo-list button {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Section Boxes */
+.dashboard-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}

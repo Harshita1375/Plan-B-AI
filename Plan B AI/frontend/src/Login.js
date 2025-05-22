@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Login.css';
+import { useNavigate } from 'react-router-dom';
+
+
 
 function Login() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
@@ -19,7 +23,8 @@ function Login() {
 
       const token = response.data.auth_token;
       localStorage.setItem('authToken', token);
-      setMessage('Login successful!');
+      //setMessage('Login successful!');
+      navigate('/dashboard');
     } catch (error) {
       const errorMsg = error.response?.data?.non_field_errors?.[0] || 'Login failed. Please check your credentials.';
       setMessage(errorMsg);

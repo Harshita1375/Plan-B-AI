@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import './Details.css'; // Import the CSS file here
 
 function Details() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     college: '',
     degree: '',
@@ -52,6 +54,7 @@ function Details() {
           skills: '',
           certifications: '',
         });
+        navigate('/dashboard');
       }
     } catch (error) {
       setMessage('Failed to save details. Please try again.');
@@ -100,7 +103,7 @@ function Details() {
         <input
           type="text"
           name="skills"
-          placeholder="Skills (comma separated)"
+          placeholder="Skills"
           value={formData.skills}
           onChange={handleChange}
           className="details-input"
@@ -108,7 +111,7 @@ function Details() {
         <input
           type="text"
           name="certifications"
-          placeholder="Certifications (comma separated)"
+          placeholder="Certifications"
           value={formData.certifications}
           onChange={handleChange}
           className="details-input"
