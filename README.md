@@ -48,3 +48,11 @@
 - **Database**: PostgreSQL
 - **Machine Learning**: Scikit-learn (served via Django)
 - **Authentication**: JSON Web Token
+
+## Screenshot
+![image](https://github.com/user-attachments/assets/6adab3aa-d2db-4107-9c84-3cbed59f2abe)
+<br>
+![image](https://github.com/user-attachments/assets/398c0377-d831-46e2-8654-abf41f87411a)
+<br>
+![image](https://github.com/user-attachments/assets/a787afc5-7838-4330-82fe-6ce6f343e865)
+
