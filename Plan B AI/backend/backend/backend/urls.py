@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from details.views import DetailsCreateView,UserProfileView
+from details.views import DetailsCreateView, UserProfileView, CareerSurveyCreateView, CareerSurveyDetailView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +25,8 @@ urlpatterns = [
     path('api/auth/', include('djoser.urls.authtoken')),
     path('api/details/', DetailsCreateView.as_view(), name='create-details'),
     path('api/profile/', UserProfileView.as_view(), name='user-profile'),
+    path('career-survey/create/', CareerSurveyCreateView.as_view(), name='career-survey-create'),
+    path('career-survey/', CareerSurveyDetailView.as_view(), name='career-survey-detail'),
+    path('api/details/', include('details.urls')),
+
 ]

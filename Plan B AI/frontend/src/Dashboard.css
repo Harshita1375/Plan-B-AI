@@ -141,3 +141,13 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
+
+.career-bt button{
+  background: rgb(149, 182, 231);
+  color: #1613c7;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}

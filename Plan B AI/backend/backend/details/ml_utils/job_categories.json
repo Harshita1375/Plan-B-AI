@@ -1,0 +1,58 @@
+{
+    "CRM_Managerial Roles": [
+        "CRM Business Analyst",
+        "CRM Technical Developer",
+        "Project Manager",
+        "Information Technology Manager"
+    ],
+    "Analyst": [
+        "Business Systems Analyst",
+        "Business Intelligence Analyst",
+        "E-Commerce Analyst"
+    ],
+    "Mobile_Applications_Web_Development": [
+        "Mobile Applications Developer",
+        "Web Developer",
+        "Applications Developer"
+    ],
+    "QA_Testing": [
+        "Software Quality Assurance (QA) / Testing",
+        "Quality Assurance Associate"
+    ],
+    "UX_Design": [
+        "UX Designer",
+        "Design & UX"
+    ],
+    "Databases": [
+        "Database Developer",
+        "Database Administrator",
+        "Database Manager",
+        "Portal Administrator"
+    ],
+    "Programming_Systems_Analyst": [
+        "Programmer Analyst",
+        "Systems Analyst"
+    ],
+    "Networks_Systems": [
+        "Network Security Administrator",
+        "Network Security Engineer",
+        "Network Engineer",
+        "Systems Security Administrator",
+        "Software Systems Engineer",
+        "Information Security Analyst"
+    ],
+    "SE_SDE": [
+        "Software Engineer",
+        "Software Developer"
+    ],
+    "Technical_Support_Service": [
+        "Technical Engineer",
+        "Technical Services/Help Desk/Tech Support",
+        "Technical Support"
+    ],
+    "others": [
+        "Solutions Architect",
+        "Data Architect",
+        "Information Technology Auditor"
+    ]
+}

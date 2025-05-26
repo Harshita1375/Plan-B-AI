@@ -42,6 +42,9 @@ function Dashboard() {
     const updatedTasks = tasks.filter((_, i) => i !== index);
     setTasks(updatedTasks);
   };
+  const handleCareer=()=>{
+    navigate('/explore');
+  }
 
   const handleLogout = () => {
     navigate('/login');
@@ -103,7 +106,10 @@ function Dashboard() {
 
           <div className="dashboard-section">
             <h3>Career Options</h3>
-            <p>Explore careers based on your skills and education.</p>
+            <p>Explore careers based on your skills and interest.</p>
+            <div className='career-bt'>
+              <button onClick={handleCareer}>Explore</button>
+            </div>
           </div>
         </div>
       </div>

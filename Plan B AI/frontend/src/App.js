@@ -4,6 +4,7 @@ import Login from './Login';
 import Details from './Details';
 import Dashboard from './Dashboard';
 import Profile from './Profile';
+import ExploreCareer from './ExploreCareer';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/details" element={<Details />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/explore" element={<ExploreCareer />} />
       </Routes>
     </Router>
   );
