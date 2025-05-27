@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import './ExploreCareer.css';
 
-const CareerSurvey = () => {
+const CareerSurvey = () => {  
   const [formData, setFormData] = useState({
     total_cgpa: '',
     logical_quotient_rating: '',
@@ -28,7 +29,8 @@ const CareerSurvey = () => {
   });
 
   const [prediction, setPrediction] = useState(null);
-
+  const navigate = useNavigate();
+  
   const handleChange = (e) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -37,31 +39,17 @@ const CareerSurvey = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('authToken');
-
-      // Send survey data to backend
       await axios.post('http://127.0.0.1:8000/api/details/career-survey/', formData, {
         headers: { Authorization: `Token ${token}` },
       });
-
-      // Get prediction response from backend
       const res = await axios.get('http://127.0.0.1:8000/api/details/predict-career/', {
         headers: { Authorization: `Token ${token}` },
       });
-
-      // Log the whole response data to verify keys and values
-      console.log('Prediction response from API:', res.data);
-
-      // Log predicted category separately
-      console.log('Predicted Category:', res.data.predicted_category);
-
-      // Log possible roles array (or undefined)
-      console.log('Possible Roles:', res.data.suggested_roles);
-
-      // Save response to state for rendering
       setPrediction(res.data);
+      navigate('/prediction', { state: { prediction: res.data } });
     } catch (err) {
-      console.error('Error during prediction request:', err);
-      alert('An error occurred. Check console for details.');
+      console.error(err);
+      alert('Error during prediction. Check console.');
     }
   };
 

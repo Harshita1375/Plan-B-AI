@@ -13,7 +13,7 @@ class DetailsSerializer(serializers.ModelSerializer):
         read_only_fields = ['user']
 
 class UserSerializer(serializers.ModelSerializer):
-    details = DetailsSerializer(read_only=True)  # nested serializer
+    details = DetailsSerializer(read_only=True)  
 
     class Meta:
         model = User

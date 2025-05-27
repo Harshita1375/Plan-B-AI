@@ -1,5 +1,4 @@
-/* ExploreCareer.css */
-
+/* Reset and Base Styles */
 body, html {
   margin: 0;
   padding: 0;
@@ -8,14 +7,16 @@ body, html {
   background-color: #f0f2f5;
 }
 
-.career-survey {
-  height: 100vh;
+/* Centered container */
+.career-survey, .prediction-result-wrapper {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
 }
 
+/* Form container */
 form {
   background-color: #ffffff;
   padding: 30px;
@@ -27,13 +28,14 @@ form {
   overflow-y: auto;
 }
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+/* Headings */
+h2, h3, h4 {
   color: #333;
   text-align: center;
+  margin-bottom: 20px;
 }
 
+/* Input field group */
 .form-group {
   margin-bottom: 20px;
   display: flex;
@@ -54,8 +56,16 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 6px;
   resize: vertical;
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
+input:focus,
+textarea:focus {
+  border-color: #007bff;
+}
+
+/* Button */
 button {
   margin-top: 20px;
   padding: 12px 20px;
@@ -72,12 +82,38 @@ button:hover {
   background-color: #0056b3;
 }
 
+/* Prediction result */
 .prediction-result {
-  margin-top: 30px;
   background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 12px;
+  padding: 30px;
   max-width: 600px;
   width: 100%;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.prediction-result h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.prediction-result h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.prediction-result ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.prediction-result li {
+  background: #f9f9f9;
+  margin-bottom: 8px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border-left: 4px solid #007bff;
+  color: #333;
 }

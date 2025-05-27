@@ -29,4 +29,5 @@ urlpatterns = [
     path('career-survey/', CareerSurveyDetailView.as_view(), name='career-survey-detail'),
     path('api/details/', include('details.urls')),
 
+
 ]

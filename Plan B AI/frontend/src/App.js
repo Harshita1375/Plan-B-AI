@@ -5,6 +5,7 @@ import Details from './Details';
 import Dashboard from './Dashboard';
 import Profile from './Profile';
 import ExploreCareer from './ExploreCareer';
+import PredictPage from './PredictPage';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/explore" element={<ExploreCareer />} />
+        <Route path="/prediction" element={<PredictPage />} />
       </Routes>
     </Router>
   );
