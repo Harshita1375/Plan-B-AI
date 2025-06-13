@@ -1,6 +1,6 @@
 # 🎓 Plan B AI – Intelligent Career Guidance System
 
-**Plan B AI** is a personalized career guidance platform that leverages machine learning to help students make informed decisions about their future. By analyzing a student's academic performance, interests, personality traits, and job market trends, Plan B AI recommends the most suitable career paths—whether that's pursuing higher education or entering the workforce.
+**Plan B AI** is an an AI-powered personalized career guidance platform that leverages machine learning to help students make informed decisions about their future. By analyzing academic performance, interests, personality traits, and job market trends, it recommends tailored career paths.
 
 ---
 
@@ -30,6 +30,11 @@
 
 ---
 
+## 💬 Career Counselor (AI-Powered)
+Integrated Gemini LLM for natural language interaction
+Personalized guidance and explanations for students' career queries
+Chat-based interface embedded in the dashboard
+
 ## 🧠 Machine Learning Model
 
 - **Type**: MLP Classifier
@@ -48,6 +53,7 @@
 - **Database**: PostgreSQL
 - **Machine Learning**: Scikit-learn (served via Django)
 - **Authentication**: JSON Web Token
+- -**Large Language Model**: Gemini API
 
 ## Screenshot
 ![image](https://github.com/user-attachments/assets/6adab3aa-d2db-4107-9c84-3cbed59f2abe)
