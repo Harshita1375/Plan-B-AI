@@ -28,13 +28,6 @@
   - Suitable career categories
   - Job roles based on industry demand (mapped via `job_categories.json`)
 
----
-
-## 💬 Career Counselor (AI-Powered)
-Integrated Gemini LLM for natural language interaction
-Personalized guidance and explanations for students' career queries
-Chat-based interface embedded in the dashboard
-
 ## 🧠 Machine Learning Model
 
 - **Type**: MLP Classifier
@@ -43,6 +36,11 @@ Chat-based interface embedded in the dashboard
   - `OneHotEncoder` for categorical data
   - `StandardScaler` for numeric fields
 - **Output**: Career category prediction (e.g., Software Engineering, Data Science, Civil Services) with recommended job roles.
+
+## 💬 Career Counselor (AI-Powered)
+- Integrated Gemini LLM for natural language interaction
+- Personalized guidance and explanations for students' career queries
+- Chat-based interface embedded in the dashboard
 
 ---
 
